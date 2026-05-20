@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: panel-empty-space-actions 1.0\n"
+"POT-Creation-Date: 2026-05-20 00:00+0800\n"
+"PO-Revision-Date: 2026-05-20 00:00+0800\n"
+"Last-Translator: lw <lw@qq.com>\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Minimize current window"
+msgstr "最小化当前窗口"
+
+msgid "Timed minimize / restore"
+msgstr "最小化 / 恢复（限时恢复）"
+
+msgid "Trigger custom shortcut"
+msgstr "触发自定义快捷键"
+
+msgid "Show desktop / restore"
+msgstr "显示桌面 / 恢复"
+
+msgid "Maximize / restore"
+msgstr "最大化 / 还原"
+
+msgid "Close current window"
+msgstr "关闭当前窗口"
+
+msgid "Always on top / restore"
+msgstr "窗口置顶 / 还原"
+
+msgid "Hide all normal windows"
+msgstr "隐藏所有普通窗口"
+
+msgid "Do nothing"
+msgstr "不执行任何操作"
+
+msgid "Set shortcut"
+msgstr "设置快捷键"
+
+msgid "Clear shortcut"
+msgstr "清空快捷键"
+
+msgid "Press a shortcut…"
+msgstr "请按快捷键…"
+
+msgid "Panel Actions"
+msgstr "面板动作"
+
+msgid "Triggering"
+msgstr "触发说明"
+
+msgid "Only empty areas of the top panel respond. Buttons, tray icons, the clock, and menus are ignored automatically."
+msgstr "只有顶部面板的空白区域会响应，按钮、托盘图标、时钟和菜单区域会自动忽略。"
+
+msgid "Gesture map"
+msgstr "手势映射"
+
+msgid "Left button uses double-click. Middle and right buttons use single-click."
+msgstr "左键使用双击；中键和右键使用单击。"
+
+msgid "Mouse actions"
+msgstr "鼠标动作"
+
+msgid "Each panel gesture can be bound to a different action, or multiple gestures can share the same action."
+msgstr "三种鼠标手势可以分别绑定不同的窗口管理动作，也可以设置成相同动作。"
+
+msgid "Left double-click"
+msgstr "左键双击"
+
+msgid "Default: Minimize current window"
+msgstr "默认：最小化当前窗口"
+
+msgid "Middle click"
+msgstr "中键单击"
+
+msgid "Default: Maximize / restore"
+msgstr "默认：最大化 / 还原"
+
+msgid "Right click"
+msgstr "右键单击"
+
+msgid "Default: Show desktop / restore"
+msgstr "默认：显示桌面 / 恢复"
+
+msgid "Timed restore window"
+msgstr "最小化恢复时限"
+
+msgid "Used by the timed minimize / restore action. Default is 2 seconds, adjustable from 1 to 10 seconds."
+msgstr "用于“最小化 / 恢复（限时恢复）”，默认 2 秒，可设置 1 到 10 秒。"
+
+msgid "Shortcut triggers"
+msgstr "快捷键触发"
+
+msgid "When a gesture is bound to \"Trigger custom shortcut\", it executes the shortcut recorded here for that specific mouse button."
+msgstr "当某个鼠标手势绑定为“触发自定义快捷键”时，会执行这里为该手势单独录制的快捷键。"
+
+msgid "Left double-click shortcut"
+msgstr "左键双击快捷键"
+
+msgid "For example, record Super+L to lock the screen when the left double-click gesture triggers a custom shortcut."
+msgstr "例如录制 Super+L，用于左键双击绑定“触发自定义快捷键”时执行。"
+
+msgid "Middle click shortcut"
+msgstr "中键单击快捷键"
+
+msgid "Executed when the middle click gesture is bound to trigger a custom shortcut."
+msgstr "用于中键单击绑定“触发自定义快捷键”时执行。"
+
+msgid "Right click shortcut"
+msgstr "右键单击快捷键"
+
+msgid "Executed when the right click gesture is bound to trigger a custom shortcut."
+msgstr "用于右键单击绑定“触发自定义快捷键”时执行。"
+
+msgid "Diagnostics"
+msgstr "调试"
+
+msgid "Useful when checking blank-area hit detection, actor paths, and action dispatch."
+msgstr "用于排查空白区域命中、actor 路径和动作分发情况。"
+
+msgid "Enable debug logging"
+msgstr "启用调试日志"
+
+msgid "Write click hit-testing and action dispatch information to the GNOME Shell log."
+msgstr "把点击命中和动作分发信息写入 GNOME Shell 日志。"

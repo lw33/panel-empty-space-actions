@@ -1,0 +1,11 @@
+{
+  "uuid": "panel-empty-space-actions@lw33.github.com",
+  "name": "Panel Empty Space Actions",
+  "description": "Configurable mouse actions for empty space in the GNOME top panel.",
+  "shell-version": [
+    "46"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.panel-empty-space-actions",
+  "gettext-domain": "panel-empty-space-actions",
+  "version": 1
+}

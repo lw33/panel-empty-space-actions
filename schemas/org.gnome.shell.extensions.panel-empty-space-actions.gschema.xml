@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.panel-empty-space-actions" path="/org/gnome/shell/extensions/panel-empty-space-actions/">
+    <key name="primary-action" type="s">
+      <default>'minimize-focused-window'</default>
+      <summary>Primary button action</summary>
+      <description>Action triggered by double-clicking the primary button on empty panel space.</description>
+    </key>
+    <key name="middle-action" type="s">
+      <default>'toggle-maximize'</default>
+      <summary>Middle button action</summary>
+      <description>Action triggered by middle-clicking on empty panel space.</description>
+    </key>
+    <key name="secondary-action" type="s">
+      <default>'show-desktop'</default>
+      <summary>Secondary button action</summary>
+      <description>Action triggered by right-clicking on empty panel space.</description>
+    </key>
+    <key name="minimize-restore-timeout-seconds" type="i">
+      <default>2</default>
+      <range min="1" max="10"/>
+      <summary>Minimize restore timeout</summary>
+      <description>Restore window timeout, in seconds, for the timed minimize/restore action.</description>
+    </key>
+    <key name="custom-shortcut-accelerator" type="s">
+      <default>''</default>
+      <summary>Legacy custom shortcut</summary>
+      <description>Fallback custom shortcut kept for compatibility with older settings.</description>
+    </key>
+    <key name="primary-custom-shortcut-accelerator" type="s">
+      <default>''</default>
+      <summary>Primary custom shortcut</summary>
+      <description>Shortcut executed when the left double-click action is set to trigger a custom shortcut.</description>
+    </key>
+    <key name="middle-custom-shortcut-accelerator" type="s">
+      <default>''</default>
+      <summary>Middle custom shortcut</summary>
+      <description>Shortcut executed when the middle-click action is set to trigger a custom shortcut.</description>
+    </key>
+    <key name="secondary-custom-shortcut-accelerator" type="s">
+      <default>''</default>
+      <summary>Secondary custom shortcut</summary>
+      <description>Shortcut executed when the right-click action is set to trigger a custom shortcut.</description>
+    </key>
+    <key name="debug-log-enabled" type="b">
+      <default>false</default>
+      <summary>Enable debug logging</summary>
+      <description>Write hit-testing and action dispatch details to the GNOME Shell log.</description>
+    </key>
+  </schema>
+</schemalist>
