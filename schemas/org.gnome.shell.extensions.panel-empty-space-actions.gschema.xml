@@ -16,9 +16,14 @@
       <summary>Secondary button action</summary>
       <description>Action triggered by right-clicking on empty panel space.</description>
     </key>
+    <key name="capture-primary-single-click" type="b">
+      <default>false</default>
+      <summary>Capture primary single click</summary>
+      <description>When enabled, a single left click on empty panel space is consumed by the extension so the panel default behavior does not run.</description>
+    </key>
     <key name="minimize-restore-timeout-seconds" type="i">
       <default>2</default>
-      <range min="1" max="10"/>
+      <range min="1" max="50"/>
       <summary>Minimize restore timeout</summary>
       <description>Restore window timeout, in seconds, for the timed minimize/restore action.</description>
     </key>

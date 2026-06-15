@@ -17,6 +17,15 @@ cp "${SOURCE_DIR}/schemas/"*.xml "${TARGET_DIR}/schemas/"
 glib-compile-schemas "${TARGET_DIR}/schemas"
 
 rm -rf "${TARGET_DIR}/locale"
+if [[ -d "${SOURCE_DIR}/po" ]]; then
+    while IFS= read -r -d '' po_file; do
+        locale_name="$(basename "${po_file}" .po)"
+        mo_dir="${SOURCE_DIR}/locale/${locale_name}/LC_MESSAGES"
+        mkdir -p "${mo_dir}"
+        msgfmt "${po_file}" -o "${mo_dir}/panel-empty-space-actions.mo"
+    done < <(find "${SOURCE_DIR}/po" -maxdepth 1 -name '*.po' -print0)
+fi
+
 if [[ -d "${SOURCE_DIR}/locale" ]]; then
     mkdir -p "${TARGET_DIR}/locale"
     cp -a "${SOURCE_DIR}/locale/." "${TARGET_DIR}/locale/"

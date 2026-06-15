@@ -3,9 +3,15 @@
   "name": "Panel Empty Space Actions",
   "description": "Configurable mouse actions for empty space in the GNOME top panel.",
   "shell-version": [
-    "46"
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
   ],
+  "url": "https://github.com/lw33/panel-empty-space-actions",
   "settings-schema": "org.gnome.shell.extensions.panel-empty-space-actions",
   "gettext-domain": "panel-empty-space-actions",
-  "version": 1
+  "version": 2,
+  "version-name": "1.0.0"
 }

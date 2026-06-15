@@ -1,7 +1,6 @@
 import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
-import Gtk from 'gi://Gtk';
 import Meta from 'gi://Meta';
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -220,7 +219,9 @@ export default class PanelDoubleClickMinimizeExtension extends Extension {
             this._log(
                 `stored first click path=${describeActorPath(sourceActor)} timeout=${this._getDoubleClickTimeoutMs()}ms`
             );
-            return Clutter.EVENT_PROPAGATE;
+            return this._shouldCapturePrimarySingleClick()
+                ? Clutter.EVENT_STOP
+                : Clutter.EVENT_PROPAGATE;
         }
 
         const preferredWindow = this._pendingPrimaryClick.window ?? null;
@@ -411,11 +412,11 @@ export default class PanelDoubleClickMinimizeExtension extends Extension {
         if (!window || !window.can_maximize?.())
             return false;
 
-        const isMaximized = window.get_maximized?.() === Meta.MaximizeFlags.BOTH;
+        const isMaximized = this._isWindowFullyMaximized(window);
         if (isMaximized)
-            window.unmaximize(Meta.MaximizeFlags.BOTH);
+            window.unmaximize();
         else
-            window.maximize(Meta.MaximizeFlags.BOTH);
+            window.maximize();
 
         return true;
     }
@@ -508,6 +509,10 @@ export default class PanelDoubleClickMinimizeExtension extends Extension {
         return this._desktopMouseSettings?.get_int('double-click') ?? FALLBACK_DOUBLE_CLICK_TIMEOUT_MS;
     }
 
+    _shouldCapturePrimarySingleClick() {
+        return this._settings?.get_boolean('capture-primary-single-click') ?? false;
+    }
+
     _getCustomShortcutAccelerator(triggerLabel = '') {
         const settingKey = this._getCustomShortcutSettingKey(triggerLabel);
         const triggerAccelerator = settingKey
@@ -527,15 +532,13 @@ export default class PanelDoubleClickMinimizeExtension extends Extension {
     }
 
     _normalizeAccelerator(accelerator) {
-        const text = accelerator?.trim() ?? '';
-        if (!text)
-            return '';
+        return accelerator?.trim() ?? '';
+    }
 
-        const [success, keyval, modifiers] = Gtk.accelerator_parse(text);
-        if (!success || !Gtk.accelerator_valid(keyval, modifiers))
-            return text;
-
-        return Gtk.accelerator_name(keyval, modifiers);
+    _isWindowFullyMaximized(window) {
+        const horizontal = window.maximized_horizontally ?? false;
+        const vertical = window.maximized_vertically ?? false;
+        return horizontal && vertical;
     }
 
     _getCustomShortcutSettingKey(triggerLabel) {

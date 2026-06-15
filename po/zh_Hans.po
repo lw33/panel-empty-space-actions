@@ -61,6 +61,12 @@ msgstr "手势映射"
 msgid "Left button uses double-click. Middle and right buttons use single-click."
 msgstr "左键使用双击；中键和右键使用单击。"
 
+msgid "Capture left single click"
+msgstr "捕获左键单击"
+
+msgid "Consume a single left click on empty panel space and do not let the panel default behavior run."
+msgstr "在面板空白处单击左键时由扩展直接拦截，不再触发面板默认行为。"
+
 msgid "Mouse actions"
 msgstr "鼠标动作"
 

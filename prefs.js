@@ -215,6 +215,12 @@ export default class PanelEmptySpaceActionsPreferences extends ExtensionPreferen
             title: _('Gesture map'),
             subtitle: _('Left button uses double-click. Middle and right buttons use single-click.'),
         }));
+        introGroup.add(createSwitchRow(
+            settings,
+            'capture-primary-single-click',
+            _('Capture left single click'),
+            _('Consume a single left click on empty panel space and do not let the panel default behavior run.'),
+        ));
 
         const actionsGroup = new Adw.PreferencesGroup({
             title: _('Mouse actions'),
